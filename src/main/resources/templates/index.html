@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+    <title>단축 URL 생성</title>
+</head>
+<body>
+<form class="content"
+      action ="http://localhost/result" method="post">
+    <h1 class="subject">단축 URL 생성 </h1>
+    <table>
+        <thead>
+        <tr>
+            <th colspan="2">URL</th>
+            <th>생성</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="2"><input type="text" name="fullUrl" style="
+    width: 100%;
+"></td>
+            <td><input type="submit" name="create" value="생성/조회"></td>
+        </tr>
+        </tbody>
+        <thead>
+</form>
+
+
+
+</body>
+</html>

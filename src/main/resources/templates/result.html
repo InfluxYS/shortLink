@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+    <title>단축 URL 생성</title>
+</head>
+<body>
+<div class="content">
+    <h1 class="subject">단축 URL 결과 및 조회 </h1>
+    <table>
+        <thead>
+        <tr>
+            <th>URL</th>
+            <th>단축 URL</th>
+            <th>연결 수</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:object="${shortUrl != null}">
+            <td><span th:if="${shortUrl.fullUrl != null}" th:text="${shortUrl.fullUrl}"></span></td>
+            <td><span th:if="${shortUrl.shortUrl != null}" th:text="${shortUrl.shortUrl}"></span></td>
+            <td><span th:if="${shortUrl.requestCount != null}"  th:text="${shortUrl.requestCount}"></span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>
